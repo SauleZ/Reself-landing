@@ -1,0 +1,116 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;   scroll-behavior: smooth;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+  font-family: GothamPro;
+  src: url("./assets/fonts/GothamPro.ttf");
+}
+@font-face {
+  font-family: GothamProBold;
+  src: url("./assets/fonts/GothamProBold.ttf");
+}
+
+.lightNav {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 13px;
+  color: #000000;
+  text-decoration: none;
+  font-family: GothamPro, serif;
+}
+.homePage {
+  margin-top: -100px;
+}
+.heading {
+  font-family: GothamProBold, serif;
+  font-weight: bold;
+  font-size: 47px;
+  line-height: 45px;
+  color: #000000;
+}
+.header-M {
+  font-family: GothamProBold, serif;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 33px;
+  color: #000000;
+}
+.lightS {
+  font-family: GothamPro, serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 19px;
+  color: #000000;
+}
+.mainS {
+  font-family: GothamProBold, serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 19px;
+  color: #000000;
+}
+.btnTxt {
+  font-family: GothamPro, serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 15px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.lightText-XS {
+  font-family: GothamProBold, serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 15px;
+  color: #FFFFFF;
+  margin: 0 !important;
+}
+.header-S {
+  font-family: GothamProBold, serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 29px;
+  color: #000000;
+}
+.mainText-S {
+  font-family: GothamPro, serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 13px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.basicBold {
+  font-family: GothamProBold, serif;
+  font-size: 25px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.price {
+  font-family: GothamProBold, serif;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 53px;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 2px #3112B5;
+}
+
+.basic-XS {
+  font-family: GothamPro, serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+
+.test {
+  margin: 0!important;
+}
+
+li, a {
+  text-decoration: none;
+}

@@ -1,0 +1,77 @@
+<div *ngIf="!isMobile" style="background: #2C0BB0; height: 25vh" fxLayout="row">
+  <div fxFlex="3"></div>
+  <div fxFlex="94" fxLayout="20" a>
+    <div fxLayout="column" fxLayoutAlign="center start" style="height: 100%">
+      <p class="btnTxt" style="font-weight: normal">2020 Reself.kz</p>
+      <div fxLayout="row">
+        <button mat-mini-fab style="background: rgba(0,0,0,0); box-shadow: 0 0 0">
+          <img src="assets/img/Component62.png" alt="">
+        </button>
+        <button mat-mini-fab style="background: rgba(0,0,0,0); box-shadow: 0 0 0">
+          <img src="assets/img/Component%2063.png" alt="">
+        </button>
+        <button mat-mini-fab style="background: rgba(0,0,0,0); box-shadow: 0 0 0">
+          <img src="assets/img/Component64.png" alt="">
+        </button>
+      </div>
+    </div>
+    <div fxFlex="20"></div>
+    <div fxFlex="20" fxLayoutGap="5%" fxLayout="row" fxLayoutAlign="center center">
+      <div>
+        <img src="assets/img/Rectangle61.png" alt="">
+      </div>
+      <div fxLayout="column">
+        <p class="btnTxt"><span style="font-weight: normal">Курсы по</span> Java Basic</p>
+        <div fxLayoutGap="2%" fxLayoutAlign="start center" fxLayout="row">
+          <img src="assets/img/calendar.png" alt="">
+          <p class="lightText-XS">10 ноября 2020</p>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="40" fxLayoutAlign="center center">
+      <div>
+        <ul fxLayout="column" style="list-style-type: none" *ngFor="let i of links">
+          <li><a href="{{i.href}}" class="lightNav" style="color: white">{{i.title}}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div></div>
+  </div>
+  <div fxFlex="3"></div>
+</div>
+
+<div id="contacts" *ngIf="isMobile" style="background: #2C0BB0;" fxLayout="column" fxLayoutAlign="center center">
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <div fxLayout="row">
+      <button mat-mini-fab style="background: rgba(0,0,0,0); box-shadow: 0 0 0">
+        <img src="assets/img/Component62.png" alt="">
+      </button>
+      <button mat-mini-fab style="background: rgba(0,0,0,0); box-shadow: 0 0 0">
+        <img src="assets/img/Component%2063.png" alt="">
+      </button>
+      <button mat-mini-fab style="background: rgba(0,0,0,0); box-shadow: 0 0 0">
+        <img src="assets/img/Component64.png" alt="">
+      </button>
+    </div>
+    <p class="btnTxt" style="font-size: 10px">2020 Reself.kz</p>
+  </div>
+  <div fxLayout="row" fxLayoutGap="5%" style="width: 100%" fxLayoutAlign="center center">
+    <div>
+      <img src="assets/img/Rectangle%2078.png" alt="">
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center start">
+      <p class="btnTxt test" style="margin: 0; font-size: 10px"><span>Курсы по</span> Java Basic</p>
+      <div style="width: 100%" fxLayoutGap="2%" fxLayoutAlign="start center" fxLayout="row">
+        <img src="assets/img/VectorMob.png" alt="">
+        <p class="test" style="margin: 0; font-size: 7px; color: #FFFFFF;">10 ноября 2020</p>
+      </div>
+    </div>
+  </div>
+  <div style="width: 100%" fxLayoutAlign="center center">
+    <div style="width: 100%">
+      <ul fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="2%" style="list-style-type: none;">
+        <li *ngFor="let i of links"><a href="{{i.href}}" class="lightNav" style="color: white; font-size: 9px">{{i.title}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

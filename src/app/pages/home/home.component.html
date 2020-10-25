@@ -1,0 +1,61 @@
+<div *ngIf="!isMobile" style="margin-top: 20vh;" fxLayout="row">
+  <div fxFlex="13"></div>
+  <div id="home" fxFlex="74" fxLayout="column" fxLayoutAlign="space-between start">
+    <div style="width: 50%" fxLayout="column" fxLayoutGap="15%">
+      <div fxLayout="column" fxLayoutGap="4%">
+        <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="5%">
+          <p class="heading">Профессиональные курсы программирования</p>
+          <p class="lightS">Начни карьеру вместе с нами</p>
+        </div>
+        <div>
+          <button mat-raised-button style="background-color: #2C0BB0; height: 125%; border-radius: 50px;">
+            <a href="#video" style="margin: 2%" class="btnTxt">Бесплатный видео урок</a></button>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <img src="./assets/img/Component33.png" alt="">
+        <img src="./assets/img/Component32.png" alt="">
+        <img src="./assets/img/Component34.png" alt="">
+      </div>
+    </div>
+    <div>
+      <img src="assets/img/Ellipse38.png" style="position: absolute; bottom: 5vh; right: 65vh">
+      <img src="assets/img/Vector90.png" style="position: absolute; bottom: -15vh; right: 40vh">
+      <img src="assets/img/Component44.png" style="position: absolute; bottom: 5vh; right: 65vh">
+      <img src="assets/img/Component45.png" style="position: absolute; bottom: -15vh; left: 0">
+    </div>
+  </div>
+  <div fxFlex="13"></div>
+  <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
+  <a href="https://t.me/zarina_beisen" class="float" target="_blank">
+    <img src="assets/img/icons8-телеграмма-app-240.png" style="width: 100%" alt="">
+  </a>
+</div>
+
+<div *ngIf="isMobile" fxLayout="row" style="position: relative; height: 60%">
+  <div fxFlex="5"></div>
+  <div fxFlex="90" fxLayout="column">
+    <div  id="home" fxLayout="column" fxLayoutAlign="space-between start" style="width: 87%; height: 100%;">
+      <div fxLayout="column" fxLayoutAlign="space-between start" style="height: 40%;">
+        <div>
+          <p class="header-S" style="font-size: 22px;">Профессиональные курсы программирования</p>
+          <p class="lightNav">Начни карьеру вместе с нами!</p>
+        </div>
+        <div>
+          <button mat-raised-button style="background-color: #2C0BB0; border-radius: 50px;">
+            <a href="#video" style="font-size: 10px;" class="lightText-XS">Бесплатный видео урок</a>
+          </button>
+        </div>
+      </div>
+      <div fxLayout="row wrap">
+        <div *ngFor="let i of images" fxLayoutAlign="start center" fxFlex="50" style="padding: 5% 0">
+          <img src="{{i}}" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="5"></div>
+  <a href="https://t.me/zarina_beisen" class="float" target="_blank">
+    <img src="assets/img/icons8-телеграмма-app-240.png" style="width: 100%" alt="">
+  </a>
+</div>

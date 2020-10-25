@@ -1,0 +1,63 @@
+<div id="shares" fxLayout="row" style="height: 100%" fxLayoutAlign="center center" *ngIf="!isMobile">
+  <div fxFlex="13"></div>
+  <div fxFlex="74" fxLayout="row" fxLayoutAlign="space-between start">
+    <div fxFlex="50" fxLayout="column" fxLayoutGap="15%">
+      <div fxLayout="column" fxLayoutGap="5%">
+        <p class="heading">Java basic</p>
+        <div>
+          <p class="lightS">Начни программирование с 0!</p>
+          <p class="lightS">Курсы для тех, кто хочет начать программировать!</p>
+        </div>
+      </div>
+      <div>
+        <button mat-raised-button style="padding: 0.5% 2%; border-radius: 50px; color: white; background: #2C0BB0">
+          <a href="https://t.me/zarina_beisen" target="_blank" style="color: #FFFFFF">Записаться на курс</a> <!--href="https://wa.me/77773248436?text=Здравствуйте!"-->
+        </button>
+      </div>
+    </div>
+    <div fxFlex="50" style="position: relative; height: auto" fxFlexAlign="center center">
+      <img src="assets/img/Vector104.png" style="position: absolute; top: 0; right: 0;" alt="">
+      <div style="margin: 10% 0 5% 25%">
+        <p class="lightS" style="color: #2C0BB0; position: relative;">всего лишь</p>
+        <p class="price" style="position: relative;">5000 тг</p>
+      </div>
+      <div style="margin: 0 0 0 35%;">
+        <p class="lightS" style="color: #2C0BB0; position: relative;">вместо</p>
+        <p class="price" style="position: relative; color: #2C0BB0">50.000 тг</p>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="column" fxFlex="13">
+  </div>
+</div>
+
+<div *ngIf="isMobile" fxLayout="row" style="position: relative; height: 85%">
+  <div fxFlex="5"></div>
+  <div fxFlex="90" fxLayout="column">
+    <div style="width: 90%">
+      <p class="basicBold">Java basic</p>
+      <p class="basic-XS">Начни программирование с 0!</p>
+      <p class="basic-XS">Курсы для тех, кто хочет начать программировать!</p>
+    </div>
+    <div style="position: relative" fxLayout="column" fxLayoutGap="25%">
+      <div>
+        <img src="assets/img/Component%2056.png" style="width: 100%" alt="">
+        <!--        <img src="assets/img/Vector%20119.png" style="position: absolute; z-index: -5; width: 100%;" alt="">-->
+        <!--        <div style="margin: 25% 0 5% 15%">-->
+        <!--          <p class="lightS" style="color: #2C0BB0; position: relative; font-size: 12px">всего лишь</p>-->
+        <!--          <p class="price" style="position: relative; font-size: 33px;">5000 тг</p>-->
+        <!--        </div>-->
+        <!--        <div style="margin: 0 0 0 35%;">-->
+        <!--          <p class="lightS" style="color: #2C0BB0; font-size: 12px; position: relative;">вместо</p>-->
+        <!--          <p class="price" style="position: relative; font-size: 33px; color: #2C0BB0">50.000 тг</p>-->
+        <!--        </div>-->
+      </div>
+      <div fxLayoutAlign="center center">
+        <button mat-raised-button style="width: 80%; border-radius: 50px; color: white; background: #2C0BB0">
+          <a style="color: #FFFFFF" href="https://t.me/zarina_beisen" target="_blank">Записаться на курс</a>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="5"></div>
+</div>

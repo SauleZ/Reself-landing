@@ -1,0 +1,23 @@
+.slider-card {
+  margin: 0 5%;
+  transition: all 0.5s;
+}
+.slider-card2 {
+  transition: all 0.5s;
+}
+.move-left {
+  margin-left: calc(-25em);
+}
+
+//.last {
+//  margin-left: calc(-14em);
+//}
+
+.move-left2 {
+  margin-left: calc(-19em);
+}
+
+.open {
+  box-shadow: 0px 4px 40px rgba(235, 181, 181, 0.14);
+  border-radius: 6px;
+}

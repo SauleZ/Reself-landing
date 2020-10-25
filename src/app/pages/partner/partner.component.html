@@ -1,0 +1,35 @@
+<div style="height: 100%" fxLayout="row" *ngIf="!isMobile">
+  <div fxFlex="13"></div>
+  <div fxFlex="74" fxLayout="column" fxLayoutGap="10%" fxLayoutAlign="center none">
+    <div>
+      <p class="header-S">С кем мы работаем?</p>
+    </div>
+    <div fxLayout="row wrap" style="width: 100%;">
+      <div fxLayoutAlign="center center"
+           [ngClass]="{'top-border': k < partners.length/2, 'right-border': k != partners.length/2-1 &&  k != partners.length-1}"
+           fxFlex="25" fxLayout="row" *ngFor="let i of partners; let k = index;">
+        <div fxLayoutAlign="center center">
+          <img src="{{i.image}}" alt="{{i.alt}}">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="13"></div>
+</div>
+
+<div *ngIf="isMobile" fxLayout="row" style="position: relative; height: 70%">
+  <div fxFlex="5"></div>
+  <div fxFlex="90" fxLayout="column" style="padding: 10vh 0">
+    <p class="header-S" style="font-size: 15px">С кем мы работаем?</p>
+    <div fxLayout="row wrap" style="width: 100%;">
+      <div fxLayoutAlign="center center" style="height: 30%"
+           [ngClass]="{'top-border': k <= partners.length/2+1, 'right-border': k %2 == 0}"
+           fxFlex="50" fxLayout="row" *ngFor="let i of partners; let k = index;">
+        <div fxLayoutAlign="center center">
+          <img style="width: 70%" src="{{i.image}}" alt="{{i.alt}}">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="5"></div>
+</div>

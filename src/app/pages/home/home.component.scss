@@ -1,0 +1,23 @@
+.homePage {
+  background: url("src/assets/img/background.png") no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.homePage2{
+  background: url("src/assets/img/Vector89.png") no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+.float{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:40px;
+  z-index:100;
+}
+
+.my-float{
+  margin-top:16px;
+}
