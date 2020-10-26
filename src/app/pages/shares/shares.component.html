@@ -25,7 +25,8 @@
           <mat-error *ngIf="clientsForm.get('phone').hasError('required') && clientsForm.get('phone').dirty">
             Необходимо ввести номер телефона
           </mat-error>
-          <mat-error *ngIf="clientsForm.get('phone').hasError('pattern') || clientsForm.get('phone').hasError('minLength') || clientsForm.get('phone').hasError('maxLength')">
+          <mat-error
+            *ngIf="clientsForm.get('phone').hasError('pattern') || clientsForm.get('phone').hasError('minLength') || clientsForm.get('phone').hasError('maxLength')">
             Введите действительный номер
           </mat-error>
         </mat-form-field>
@@ -44,8 +45,10 @@
 
         <!--"src/app/shared/services/script.js"-->
         <div>
-          <button (click)="addRecord(clientsForm.get('name').value, clientsForm.get('phone').value, clientsForm.get('language').value)" mat-raised-button style="color: white; padding: 0.5% 5%; background-color: #2C0BB0; border-radius: 50px">Скачать
-            бесплатный видео урок
+          <button
+            (click)="addRecord(clientsForm.get('name').value, clientsForm.get('phone').value, clientsForm.get('language').value)"
+            mat-raised-button style="color: white; padding: 0.5% 5%; background-color: #2C0BB0; border-radius: 50px">
+            <a href="{{link}}" style="color: white;">Скачать бесплатный видео урок</a>
           </button>
         </div>
       </form>
@@ -81,7 +84,8 @@
           <mat-error *ngIf="clientsForm.get('phone').hasError('required') && clientsForm.get('phone').dirty">
             Необходимо ввести номер телефона
           </mat-error>
-          <mat-error *ngIf="clientsForm.get('phone').hasError('pattern') || clientsForm.get('phone').hasError('minLength') || clientsForm.get('phone').hasError('maxLength')">
+          <mat-error
+            *ngIf="clientsForm.get('phone').hasError('pattern') || clientsForm.get('phone').hasError('minLength') || clientsForm.get('phone').hasError('maxLength')">
             Введите действительный номер
           </mat-error>
         </mat-form-field>
@@ -99,7 +103,8 @@
         </mat-form-field>
 
         <div fxLayoutAlign="center start">
-          <button mat-raised-button style="color: white; padding: 0.5% 5%; background-color: #2C0BB0; border-radius: 50px">Скачать
+          <button mat-raised-button
+                  style="color: white; padding: 0.5% 5%; background-color: #2C0BB0; border-radius: 50px">Скачать
             бесплатный видео урок
           </button>
         </div>

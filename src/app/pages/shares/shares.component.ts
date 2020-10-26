@@ -14,6 +14,7 @@ export class SharesComponent implements OnInit {
   isDesktop;
   isMobile;
   isTablet;
+  link;
 
   clientsForm: FormGroup;
   languages: Sourse[] = [
@@ -47,7 +48,13 @@ export class SharesComponent implements OnInit {
   }
 
   addRecord(name, phone, language) {
-    j(name, phone, language);
+    if (this.clientsForm.valid) {
+      j(name, phone, language);
+      this.link = 'https://drive.google.com/drive/folders/1k91XVfSsnyR-g4JfagwlvatGrMcmFmQK';
+    }
+    else {
+      this.link = '#video';
+    }
   }
 }
 interface Sourse {
