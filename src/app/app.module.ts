@@ -22,7 +22,7 @@ import { JavaBasicComponent } from './pages/java-basic/java-basic.component';
 import { ProgramComponent } from './pages/program/program.component';
 import {MatCardModule} from '@angular/material/card';
 import { PartnerComponent } from './pages/partner/partner.component';
-import { ServicesComponent } from './shared/services/services.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -35,8 +35,7 @@ import { ServicesComponent } from './shared/services/services.component';
     ContactsComponent,
     JavaBasicComponent,
     ProgramComponent,
-    PartnerComponent,
-    ServicesComponent
+    PartnerComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +49,8 @@ import { ServicesComponent } from './shared/services/services.component';
     MatInputModule,
     MatSelectModule,
     ReactiveFormsModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

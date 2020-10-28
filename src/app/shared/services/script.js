@@ -1,11 +1,11 @@
 // import xlsx from 'xlsx';
-import {createRequire} from 'module';
-const require = createRequire(import.meta.url);
+// import {createRequire} from 'module';
+// const require = createRequire(import.meta.url);
 
 // j("lol", "lol", "lol");
 
 function j(name, phone, language) {
-  // alert(language)
+  alert(language)
   var xlsx = require("xlsx")
 
   var wb = xlsx.readFile("test.xlsx");

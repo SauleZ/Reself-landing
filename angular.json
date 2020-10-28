@@ -32,7 +32,7 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "src/app/shared/services/script.js"
+              "./src/app/shared/services/script.js"
             ]
           },
           "configurations": {

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {DeviceDetectorService} from 'ngx-device-detector';
-import {ExportExcelService} from '../../shared/services/export-excel.service';
 
 @Component({
   selector: 'app-java-basic',
@@ -14,9 +13,7 @@ export class JavaBasicComponent implements OnInit {
   isTablet;
 
   constructor(
-    private deviceDetectorService: DeviceDetectorService,
-    private exportExcelService: ExportExcelService
-  ) {
+    private deviceDetectorService: DeviceDetectorService) {
     this.isDesktop = deviceDetectorService.isDesktop();
     this.isMobile = deviceDetectorService.isMobile();
     this.isTablet = deviceDetectorService.isTablet();

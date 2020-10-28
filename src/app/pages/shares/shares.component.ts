@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {DeviceDetectorService} from 'ngx-device-detector';
+import {StudentsService} from '../../shared/services/students.service';
 
-declare function j(name, phone, language): any;
+// declare function j(name, phone, language): any;
 
 @Component({
   selector: 'app-shares',
@@ -30,7 +31,8 @@ export class SharesComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private deviceDetectorService: DeviceDetectorService
+    private deviceDetectorService: DeviceDetectorService,
+    private service: StudentsService
   ) {
     this.isDesktop = this.deviceDetectorService.isDesktop();
     this.isMobile = this.deviceDetectorService.isMobile();
@@ -49,7 +51,10 @@ export class SharesComponent implements OnInit {
 
   addRecord(name, phone, language) {
     if (this.clientsForm.valid) {
-      j(name, phone, language);
+      // j(name, phone, language);
+      this.service.addStudentData(this.clientsForm.getRawValue()).subscribe(res => {
+        console.log(res);
+      });
       this.link = 'https://drive.google.com/drive/folders/1k91XVfSsnyR-g4JfagwlvatGrMcmFmQK';
     }
     else {

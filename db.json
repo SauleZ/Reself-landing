@@ -1,0 +1,28 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "Test",
+      "phone": "87773248436",
+      "language": "kz"
+    },
+    {
+      "name": "Saule",
+      "phone": "87773248436",
+      "language": "kz",
+      "id": 2
+    },
+    {
+      "name": "Saule",
+      "phone": "87773248436",
+      "language": "kz",
+      "id": 3
+    },
+    {
+      "name": "Test",
+      "phone": "87773248436",
+      "language": "kz",
+      "id": 4
+    }
+  ]
+}
