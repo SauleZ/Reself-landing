@@ -3,8 +3,6 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {DeviceDetectorService} from 'ngx-device-detector';
 import {StudentsService} from '../../shared/services/students.service';
 
-// declare function j(name, phone, language): any;
-
 @Component({
   selector: 'app-shares',
   templateUrl: './shares.component.html',
@@ -16,6 +14,7 @@ export class SharesComponent implements OnInit {
   isMobile;
   isTablet;
   link;
+  arr;
 
   clientsForm: FormGroup;
   languages: Sourse[] = [
@@ -40,8 +39,7 @@ export class SharesComponent implements OnInit {
     this.clientsForm = this.formBuilder.group({
       name: new FormControl('', Validators.required),
       phone: new FormControl('', [Validators.required,
-        Validators.maxLength(30), Validators.minLength(10),
-        Validators.pattern('[0-9 ()+-]*')]),
+        Validators.pattern('[0-9 ()+-]*'), Validators.maxLength(17), Validators.minLength(17)]),
       language: new FormControl('', Validators.required)
     });
   }
@@ -49,12 +47,12 @@ export class SharesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addRecord(name, phone, language) {
+  addRecord() {
     if (this.clientsForm.valid) {
-      // j(name, phone, language);
       this.service.addStudentData(this.clientsForm.getRawValue()).subscribe(res => {
         console.log(res);
       });
+
       this.link = 'https://drive.google.com/drive/folders/1k91XVfSsnyR-g4JfagwlvatGrMcmFmQK';
     }
     else {

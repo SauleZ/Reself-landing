@@ -44,18 +44,15 @@
 // import {createRequire} from 'module';
 // const require = createRequire(import.meta.url);
 
-function j(name, phone, language) {
+
+function j(jsonData) {
   alert(language)
   var xlsx = require("xlsx")
-  alert("SAULEE");
-
   var wb = xlsx.readFile("test.xlsx");
-  alert("SAULEE");
-  console.log(wb);
-
-  var ws = wb.Sheets[wb.SheetNames[0]]; //"Лист1"
-  xlsx.utils.sheet_add_aoa(ws, [
-    [name, phone, language]
-  ], {origin: -1});
-  xlsx.writeFile(wb, "test.xlsx");
+  var ws = xlsx.utils.json_to_sheet(jsonData);
+  // var ws = wb.Sheets[wb.SheetNames[0]]; //"Лист1"
+  // xlsx.utils.sheet_add_aoa(ws, [
+  //   [name, phone, language]
+  // ], {origin: -1});
+  // xlsx.writeFile(wb, "test.xlsx");
 }

@@ -22,7 +22,8 @@ import { JavaBasicComponent } from './pages/java-basic/java-basic.component';
 import { ProgramComponent } from './pages/program/program.component';
 import {MatCardModule} from '@angular/material/card';
 import { PartnerComponent } from './pages/partner/partner.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from '@angular/common/http';
+import { PhoneMaskDirective } from './pages/shares/phone-mask.directive';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {HttpClientModule} from "@angular/common/http";
     ContactsComponent,
     JavaBasicComponent,
     ProgramComponent,
-    PartnerComponent
+    PartnerComponent,
+    PhoneMaskDirective
   ],
   imports: [
     BrowserModule,

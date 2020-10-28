@@ -1,28 +1,10 @@
 {
   "clients": [
     {
-      "id": 1,
       "name": "Test",
-      "phone": "87773248436",
-      "language": "kz"
-    },
-    {
-      "name": "Saule",
-      "phone": "87773248436",
+      "phone": "(777) (324)-84-36",
       "language": "kz",
-      "id": 2
-    },
-    {
-      "name": "Saule",
-      "phone": "87773248436",
-      "language": "kz",
-      "id": 3
-    },
-    {
-      "name": "Test",
-      "phone": "87773248436",
-      "language": "kz",
-      "id": 4
+      "id": 1
     }
   ]
 }

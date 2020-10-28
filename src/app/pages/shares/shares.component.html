@@ -21,7 +21,7 @@
 
         <mat-form-field>
           <mat-label>Телефон</mat-label>
-          <input formControlName="phone" matInput required>
+          <input type="text" appPhoneMask formControlName="phone" matInput required>
           <mat-error *ngIf="clientsForm.get('phone').hasError('required') && clientsForm.get('phone').dirty">
             Необходимо ввести номер телефона
           </mat-error>
@@ -46,7 +46,7 @@
         <!--"src/app/shared/services/script.js"-->
         <div>
           <button
-            (click)="addRecord(clientsForm.get('name').value, clientsForm.get('phone').value, clientsForm.get('language').value)"
+            (click)="addRecord()"
             mat-raised-button style="color: white; padding: 0.5% 5%; background-color: #2C0BB0; border-radius: 50px">
             <a href="{{link}}" target="_blank" style="color: white;">Скачать бесплатный видео урок</a>
           </button>
