@@ -1,4 +1,4 @@
-<div id="video" fxLayout="row" *ngIf="!isMobile">
+<div id="video" fxLayout="row" *ngIf="isDesktop">
   <div fxFlex="13"></div>
   <div fxFlex="74" fxLayout="row" fxLayoutAlign="space-between start">
     <div style="height: 80%">
@@ -112,4 +112,63 @@
     </div>
   </div>
   <div fxFlex="5"></div>
+</div>
+
+<div id="video" fxLayout="row" style="height: 50%" *ngIf="isTablet">
+  <div fxFlex="13"></div>
+  <div fxFlex="74" fxLayout="row" fxLayoutAlign="space-between center">
+    <div style="height: 100%;">
+      <img src="./assets/img/image1.png" alt="">
+    </div>
+    <div fxFlex="47" fxLayout="column" style="height: 100%">
+      <div fxFlex="30">
+        <p class="header-M">Скачай бесплатный видео урок по Java Basic!</p>
+        <p class="lightS">Заполни данные, и получи видео урок бесплатно!</p>
+      </div>
+      <form [formGroup]="clientsForm" fxLayout="column">
+
+        <mat-form-field>
+          <mat-label>Как к вам обращаться</mat-label>
+          <input formControlName="name" matInput required>
+          <mat-error *ngIf="clientsForm.get('name').hasError('required') && clientsForm.get('name').dirty">
+            Необходимо ввести имя
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Телефон</mat-label>
+          <input type="text" appPhoneMask formControlName="phone" matInput required>
+          <mat-error *ngIf="clientsForm.get('phone').hasError('required') && clientsForm.get('phone').dirty">
+            Необходимо ввести номер телефона
+          </mat-error>
+          <mat-error
+            *ngIf="clientsForm.get('phone').hasError('pattern') || clientsForm.get('phone').hasError('minLength') || clientsForm.get('phone').hasError('maxLength')">
+            Введите действительный номер
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="50" fxFlex.lt-sm="100" fxFlex.lt-lg="100">
+          <mat-label>На каком языке вам удобно смотреть видео урок?</mat-label>
+          <mat-select formControlName="language">
+            <mat-option *ngFor="let lang of languages" [value]="lang.value">
+              {{lang.viewValue}}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="clientsForm.get('language').hasError('required') && clientsForm.get('language').touched">
+            Необходимо выбрать язык
+          </mat-error>
+        </mat-form-field>
+
+        <!--"src/app/shared/services/script.js"-->
+        <div>
+          <button
+            (click)="addRecord()"
+            mat-raised-button style="color: white; padding: 0.5% 5%; background-color: #2C0BB0; border-radius: 50px">
+            <a href="{{link}}" target="_blank" style="color: white; width: 100%">Скачать бесплатный видео урок</a>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div fxFlex="13"></div>
 </div>

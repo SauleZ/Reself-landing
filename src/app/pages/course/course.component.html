@@ -1,4 +1,4 @@
-<div *ngIf="!isMobile" style="height: 100%" fxLayout="column" fxLayoutGap="5%" fxLayoutAlign="center center">
+<div *ngIf="isDesktop" style="height: 100%" fxLayout="column" fxLayoutGap="5%" fxLayoutAlign="center center">
   <div id="courses" fxLayout="row">
     <p class="header-S">Доступные курсы</p>
     <img style="right: 0; position: absolute" src="./assets/img/Component46.png" alt="">
@@ -79,4 +79,44 @@
 
   </div>
   <div fxFlex="5"></div>
+</div>
+
+<div *ngIf="isTablet" style="padding: 15% 0" fxLayout="column" fxLayoutGap="5%" fxLayoutAlign="start center"  >
+
+  <div id="courses" fxLayout="row">
+    <p class="header-S">Доступные курсы</p>
+    <img style="right: 0; position: absolute" src="./assets/img/Component46.png" alt="">
+  </div>
+  <div style="width: 100%" class="slider" fxLayout="row" fxLayoutAlign="center center">
+    <div fxLayoutAlign="center center" fxFlex="10">
+      <button *ngIf="page!=1" mat-mini-fab style="background: rgba(203, 204, 224, 0.45); box-shadow: 0 0 0" (click)="prevShow()">
+        <mat-icon style="color: #7B80F9;">keyboard_arrow_left</mat-icon>
+      </button>
+    </div>
+
+    <div style="overflow-x: hidden; height: 100%;" fxFlex="80" fxLayout="row">
+      <div fxLayout="row" class="slider-card3" *ngFor="let card of arrCard, let i = index"
+           [ngClass]="{'move-left3': marginIndex >= (i + 1)}"
+           (click)="clickCard((i + 1))">
+        <div fxLayoutGap="5%" style="width: 42vh; height: 40vh; margin: 0 5%" fxLayoutAlign="center center"
+             fxLayout="column" [ngClass]="{'open': (i + 1) === showCardIndex}">
+          <img style="height: 15vh" src="{{card.image}}" alt="">
+          <div style="width: 70%" fxLayoutAlign="center center" fxLayout="column">
+            <p class="lightS" style="font-weight: bold">{{card.title}}</p>
+            <p class="mainText-S">{{card.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div fxLayoutAlign="center center" fxFlex="10">
+      <button mat-mini-fab style="background: rgba(203, 204, 224, 0.45); box-shadow: 0 0 0" (click)="nextShow()">
+        <mat-icon style="color: #7B80F9">keyboard_arrow_right</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div style="position: relative; width: 100%">
+    <img src="./assets/img/Vector92.png" style="left: 0; position: absolute; top: -15vh;" alt="">
+  </div>
 </div>

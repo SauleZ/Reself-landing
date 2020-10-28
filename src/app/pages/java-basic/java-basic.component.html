@@ -1,4 +1,4 @@
-<div id="shares" fxLayout="row" style="height: 100%" fxLayoutAlign="center center" *ngIf="!isMobile">
+<div id="shares" fxLayout="row" style="height: 100%" fxLayoutAlign="center center" *ngIf="isDesktop">
   <div fxFlex="13"></div>
   <div fxFlex="74" fxLayout="row" fxLayoutAlign="space-between start">
     <div fxFlex="50" fxLayout="column" fxLayoutGap="15%">
@@ -60,4 +60,37 @@
     </div>
   </div>
   <div fxFlex="5"></div>
+</div>
+
+<div id="shares" fxLayout="row" fxLayoutAlign="center center" *ngIf="isTablet" style="height: 50%">
+  <div fxFlex="13"></div>
+  <div fxFlex="74" fxLayout="row" fxLayoutAlign="space-between start">
+    <div fxFlex="50" fxLayout="column" fxLayoutGap="15%">
+      <div fxLayout="column" fxLayoutGap="5%">
+        <p class="heading">Java basic</p>
+        <div>
+          <p class="lightS">Начни программирование с 0!</p>
+          <p class="lightS">Курсы для тех, кто хочет начать программировать!</p>
+        </div>
+      </div>
+      <div>
+        <button mat-raised-button style="padding: 0.5% 2%; border-radius: 50px; color: white; background: #2C0BB0; width: 100%">
+          <a href="https://t.me/zarina_beisen" target="_blank" style="color: #FFFFFF;">Записаться на курс</a> <!--href="https://wa.me/77773248436?text=Здравствуйте!"-->
+        </button>
+      </div>
+    </div>
+    <div fxFlex="50" style="position: relative; height: auto" fxFlexAlign="center center">
+      <img src="assets/img/Vector104.png" style="position: absolute; top: 0; right: -5em; width: 30em" alt="">
+      <div style="margin: 10% 0 5% 25%">
+        <p class="lightS" style="color: #2C0BB0; position: relative;">всего лишь</p>
+        <p class="price" style="position: relative; font-size: 40px;">5000 тг</p>
+      </div>
+      <div style="margin: 0 0 0 35%;">
+        <p class="lightS" style="color: #2C0BB0; position: relative;">вместо</p>
+        <p class="price" style="position: relative; color: #2C0BB0; font-size: 40px;">50.000 тг</p>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="column" fxFlex="13">
+  </div>
 </div>

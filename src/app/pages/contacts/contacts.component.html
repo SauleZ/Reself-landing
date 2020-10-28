@@ -1,4 +1,4 @@
-<div id="contacts" fxLayout="column" style="height: 50%" *ngIf="!isMobile">
+<div id="contacts" fxLayout="column" style="height: 50%" *ngIf="isDesktop">
   <div fxFlex="20" style="width: 100%;">
     <div fxFlex="13"></div>
     <p class="header-S">Как связаться?</p>
@@ -12,7 +12,6 @@
         <p class="lightS" style="position: relative; font-weight: bold; color: white">Контакты</p>
       </div>
       <div style="width: 100%" fxLayout="row">
-        <!--        <div fxLayout="row">-->
         <div fxFlex="25" *ngFor="let i of contacts; let index = index">
           <div [ngClass]="{'border': index != contacts.length-1}" fxLayout="row" fxLayoutAlign="center center"
                fxLayoutGap="7%">
@@ -25,10 +24,42 @@
             </div>
           </div>
         </div>
-        <!--        </div>-->
       </div>
     </div>
     <div fxFlex="3"></div>
   </div>
   <div fxFlex="15"></div>
+</div>
+
+<div id="contacts" fxLayout="column" style="height: 30%" *ngIf="isTablet">
+  <div fxFlex="10" style="width: 100%;">
+    <div fxFlex="13"></div>
+    <p class="header-S">Как связаться?</p>
+  </div>
+  <div fxFlex="80" style="width: 100%;" fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex="3"></div>
+    <div fxFlex="94" style="position: relative; height: 50%" fxFlexAlign="center" fxLayoutGap="5%">
+      <img src="assets/img/Vector%20104.png" style="position: absolute; left: 0; bottom: 0" alt="">
+      <div fxLayoutAlign="center center" fxFlex="15" fxLayout="row">
+        <!--        <img style=" left: 0; bottom: 0;" src="assets/img/Vector%20104.png" alt="">-->
+        <p class="lightS" style="position: relative; font-weight: bold; color: white">Контакты</p>
+      </div>
+      <div style="width: 100%" fxLayout="row" fxLayoutAlign="center center">
+        <div fxFlex="25" *ngFor="let i of contacts; let index = index">
+          <div [ngClass]="{'border': index != contacts.length-1}" fxLayout="row" fxLayoutAlign="center center"
+               fxLayoutGap="7%">
+            <div>
+              <img src="{{i.image}}" alt="">
+            </div>
+            <div fxLayout="column">
+              <p class="btnTxt" style="margin: 5% 0; font-size: 16px; color: black">{{i.title}}</p>
+              <p class="lightNav">{{i.text}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="3"></div>
+  </div>
+  <div fxFlex="10"></div>
 </div>

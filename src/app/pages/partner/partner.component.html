@@ -1,4 +1,4 @@
-<div style="height: 100%" fxLayout="row" *ngIf="!isMobile">
+<div style="height: 100%" fxLayout="row" *ngIf="isDesktop">
   <div fxFlex="13"></div>
   <div fxFlex="74" fxLayout="column" fxLayoutGap="10%" fxLayoutAlign="center none">
     <div>
@@ -32,4 +32,23 @@
     </div>
   </div>
   <div fxFlex="5"></div>
+</div>
+
+<div style="padding: 15% 0" fxLayout="row" *ngIf="isTablet">
+  <div fxFlex="13"></div>
+  <div fxFlex="74" fxLayout="column" fxLayoutGap="10%" fxLayoutAlign="center none">
+    <div>
+      <p class="header-S">С кем мы работаем?</p>
+    </div>
+    <div fxLayout="row wrap" style="width: 100%;">
+      <div fxLayoutAlign="center center"
+           [ngClass]="{'top-border': k < partners.length/2, 'right-border': k != partners.length/2-1 &&  k != partners.length-1}"
+           fxFlex="25" fxLayout="row" *ngFor="let i of partners; let k = index;">
+        <div fxLayoutAlign="center center">
+          <img src="{{i.image}}" alt="{{i.alt}}">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="13"></div>
 </div>

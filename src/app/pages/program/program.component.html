@@ -1,4 +1,4 @@
-<div style=" height: 100%;" fxLayout="row" *ngIf="!isMobile">
+<div style=" height: 100%;" fxLayout="row" *ngIf="isDesktop">
   <div style="position: relative;">
     <div fxFlex="13"></div>
     <div fxFlex="74" style="height: 100vh" fxLayout="column" fxLayoutAlign="center center">
@@ -13,7 +13,7 @@
             <mat-card-content style="width: 100%">
               <img style="width: 100%" src="assets/img/Azamat.png" alt="">
               <div fxLayout="column">
-                <p class="header-S" style="font-size: 24px;">Кому предназначены курсы по Java Basic?</p>
+                <p class="header-S" style="font-size: 24px;">Для кого предназначены курсы по Java Basic?</p>
                 <div>
                   <p>Курсы предназначены <span style="color: #2C0BB0; font-weight: bold;">ДЛЯ ВСЕХ</span>,
                     кто хочет начать программировать!</p> <!--ДЛЯ ВСЕХ?)-->
@@ -114,7 +114,7 @@
         <mat-card-content style="width: 100%">
           <img style="width: 100%" src="assets/img/Azamat.png" alt="">
           <div fxLayout="column">
-            <p class="header-S" style="font-size: 24px;">Кому предназначены курсы по Java Basic?</p>
+            <p class="header-S" style="font-size: 24px;">Для кого предназначены курсы по Java Basic?</p>
             <div>
               <p>Курсы предназначены <span style="color: #2C0BB0; font-weight: bold;">ДЛЯ ВСЕХ</span>,
                 кто хочет начать программировать!</p> <!--ДЛЯ ВСЕХ?)-->
@@ -199,4 +199,109 @@
     </div>
   </div>
   <div fxFlex="5"></div>
+</div>
+
+<div style=" height: 85%;" fxLayout="row" *ngIf="isTablet">
+  <div style="position: relative;">
+    <div fxFlex="13"></div>
+    <div fxFlex="74" style="height: 100vh" fxLayout="column" fxLayoutAlign="center center">
+      <!--    <div fxFlex="20"></div>-->
+      <!--    <div>-->
+      <img src="assets/img/Vector105.png" style="position: absolute; right: 0; top: 17vh; width: 20vh;">
+      <img src="assets/img/Vector106.png" style="position: absolute; left: 0; bottom: 0; width: 23vh;">
+      <div style="position: relative">
+        <p class="header-S">Программа курса</p>
+        <div style="margin: 15% 0" fxLayoutAlign="center center" fxLayout="row" fxLayoutGap="2%">
+          <mat-card fxFlex="50" style="box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);">
+            <mat-card-content style="width: 100%">
+              <img style="width: 100%" src="assets/img/Azamat.png" alt="">
+              <div fxLayout="column">
+                <p class="header-S" style="font-size: 24px;">Для кого предназначены курсы по Java Basic?</p>
+                <div>
+                  <p>Курсы предназначены <span style="color: #2C0BB0; font-weight: bold;">ДЛЯ ВСЕХ</span>,
+                    кто хочет начать программировать!</p> <!--ДЛЯ ВСЕХ?)-->
+                  <p>Возраст, город и ваши знания по математике и английскому &#8211; не преграда!</p>
+                  <p>Курсы будут проходить <span style="color: #2C0BB0; font-weight: bold;">ОНЛАЙН</span>!</p>
+                  <p>Задача курса — дать студенту достаточное представление о том, чем же является программирование.
+                    Начав обучение "с нуля" к концу модуля студент сможет как самостоятельно писать код на языке
+                    Java!</p>
+                  <p style="color: #2C0BB0; font-weight: bold;">16 уроков!</p>
+                  <p>На 2х языках - <span style="color: #2C0BB0; font-weight: bold;">На Казахском и Русском!</span></p>
+                  <p>И все темы, которые нужны чтобы начать программировать!</p>
+                  <div fxLayout="row">
+                    <img src="assets/img/Vector.png" alt="">
+                    <p fxLayoutAlign="center center" style="margin: 0 2%;" class="mainText-S">10 ноября 2020</p>
+                  </div>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+          <mat-card fxFlex="50" style="box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);">
+            <mat-card-content>
+              <p class="header-S" style="font-size: 24px; width: 80%">Программа курса по Java Basic</p>
+              <div fxLayout="column" fxLayoutGap="2%">
+                <mat-card style="padding: 6px 16px">
+                  <ul style="padding: 0 2%">
+                    <li>Что такое Java?</li>
+                    <li>Установка SDK</li>
+                    <li>Первая программа на Java!</li>
+                    <li>Method Main()</li>
+                  </ul>
+                </mat-card>
+                <mat-card style="padding: 6px 16px">
+                  <ul style="padding: 0 2%">
+                    <li>Переменные в Java</li>
+                    <li>Типы данных</li>
+                    <li>Math operators и Math Class</li>
+                  </ul>
+                </mat-card>
+                <mat-card style="padding: 6px 16px">
+                  <ul style="padding: 0 2%">
+                    <li>Java strings</li>
+                    <li>Java Operations</li>
+                    <li>If statements</li>
+                    <li>Ternary operators</li>
+                  </ul>
+                </mat-card>
+                <mat-card style="padding: 6px 16px">
+                  <ul style="padding: 0 2%">
+                    <li>Switch statements</li>
+                    <li>Цикл For</li>
+                    <li>Цикл While</li>
+                    <li>Цикл Do While</li>
+                  </ul>
+                </mat-card>
+                <mat-card style="padding: 6px 16px">
+                  <ul style="padding: 0 2%">
+                    <li>Массивы</li>
+                    <li>Массивы и операции в Java</li>
+                  </ul>
+                </mat-card>
+                <mat-card style="padding: 6px 16px">
+                  <ul style="padding: 0 2%">
+                    <li>Классы в Java</li>
+                    <li>Поля в Java</li>
+                    <li>Методы в Java</li>
+                  </ul>
+                </mat-card>
+                <mat-card style="padding: 6px 16px">
+                  <ul style="padding: 0 2%">
+                    <li>Конструктор</li>
+                  </ul>
+                </mat-card>
+                <mat-card style="padding: 6px 16px">
+                  <ul style="padding: 0 2%">
+                    <li>Абстрактные классы</li>
+                    <li>Интерфейсы</li>
+                  </ul>
+                </mat-card>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+    <!--  </div>-->
+    <div fxFlex="13"></div>
+  </div>
 </div>

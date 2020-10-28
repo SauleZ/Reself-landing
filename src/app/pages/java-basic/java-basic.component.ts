@@ -21,12 +21,4 @@ export class JavaBasicComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  writeXSLX() {
-    // const ExcelJS = require('excelJS');
-  }
-
-  // add() {
-    // this.exportExcelService.create();
-  // }
 }
