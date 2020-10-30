@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DeviceDetectorService} from 'ngx-device-detector';
 
 @Component({
@@ -40,14 +40,16 @@ export class CourseComponent implements OnInit {
   ];
 
   constructor(private deviceDetectorService: DeviceDetectorService) {
-    this.isDesktop  = deviceDetectorService.isDesktop();
-    this.isMobile  = deviceDetectorService.isMobile();
-    this.isTablet  = deviceDetectorService.isTablet();}
+    this.isDesktop = deviceDetectorService.isDesktop();
+    this.isMobile = deviceDetectorService.isMobile();
+    this.isTablet = deviceDetectorService.isTablet();
+  }
 
   ngOnInit(): void {
   }
+
   nextShow() {
-    if (this.marginIndex !== this.arrCard.length - 2) {
+    if (this.marginIndex !== this.arrCard.length - 3) {
       this.marginIndex += 1;
       this.page += 1;
       this.page2 += 1;
@@ -57,12 +59,22 @@ export class CourseComponent implements OnInit {
   }
 
   prevShow() {
-    if (this.marginIndex !== -1) {
-      this.marginIndex -= 1;
-      this.page -= 1;
-      this.page2 -= 1;
-      this.showCardIndex = this.page;
-      this.showCardIndex2 = this.page2;
+    if (!this.isMobile)
+      if (this.marginIndex !== 0) {
+        this.marginIndex -= 1;
+        this.page -= 1;
+        this.page2 -= 1;
+        this.showCardIndex = this.page;
+        this.showCardIndex2 = this.page2;
+      }
+    if (this.isMobile) {
+      if (this.marginIndex !== -1) {
+        this.marginIndex -= 1;
+        this.page -= 1;
+        this.page2 -= 1;
+        this.showCardIndex = this.page;
+        this.showCardIndex2 = this.page2;
+      }
     }
   }
 

@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "reself-landing"
+  "defaultProject": "reself-landing",
+  "cli": {
+    "analytics": "7986022a-c5ec-4207-b13a-16795364f0c9"
+  }
 }

@@ -12,7 +12,7 @@
 
     <div style="overflow-x: hidden; height: 100%;" fxFlex="80" fxLayout="row">
       <div fxLayout="row" class="slider-card" *ngFor="let card of arrCard, let i = index"
-           [ngClass]="{'move-left': marginIndex >= (i + 1), 'last': marginIndex !== arrCard.length-2}"
+           [ngClass]="{'move-left': marginIndex >= (i + 1) && marginIndex < 2}"
            (click)="clickCard((i + 1))">
         <div fxLayoutGap="5%" style="width: 42vh; height: 40vh; margin: 0 5%" fxLayoutAlign="center center"
              fxLayout="column" [ngClass]="{'open': (i + 1) === showCardIndex2}">
@@ -43,7 +43,7 @@
     <p class="heading" style="font-size: 14px">Доступные курсы</p>
     <div style="width: 100%" fxLayout="row">
 
-      <div *ngIf="page2 != 0" fxLayoutAlign="center center" fxFlex="5">
+      <div *ngIf="marginIndex !== -1" fxLayoutAlign="center center" fxFlex="5">
         <button mat-mini-fab style="background: rgba(203, 204, 224, 0.45); box-shadow: 0 0 0" (click)="prevShow()">
           <mat-icon style="color: #7B80F9;">keyboard_arrow_left</mat-icon>
         </button>
