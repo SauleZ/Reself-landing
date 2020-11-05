@@ -1,0 +1,10 @@
+[
+  {
+    "context": [
+      ""
+    ],
+    "target": "http://78.140.223.188:3000",
+    "secure": false,
+    "changeOrigin": true
+  }
+]
