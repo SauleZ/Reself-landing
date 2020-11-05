@@ -26,7 +26,7 @@ export class ContactsComponent implements OnInit {
     {
       image: 'assets/img/phone_logo.png',
       title: 'ТЕЛЕФОН',
-      text: '+ 7(776)-847 21 22'
+      text: '+7(707) 326 48 18'
     },
     {
       image: 'assets/img/time1.png',
