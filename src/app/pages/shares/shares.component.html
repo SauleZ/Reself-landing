@@ -1,13 +1,13 @@
 <div id="video" fxLayout="row" *ngIf="isDesktop">
   <div fxFlex="13"></div>
-  <div fxFlex="74" fxLayout="row" fxLayoutAlign="space-between start">
+  <div fxFlex="74" fxLayout="row" fxLayoutAlign="space-around start">
     <div style="height: 80%">
       <img style="height: 100%" src="./assets/img/image1.png" alt="">
     </div>
-    <div fxFlex="47" fxLayout="column" style="height: 100%">
+    <div fxFlex="35" fxLayout="column" style="height: 100%">
       <div fxFlex="30">
         <p class="header-M">Скачай бесплатный видео урок по Java Basic!</p>
-        <p class="lightS">Заполни данные, и получи видео урок бесплатно!</p>
+        <p style="text-align: start" class="lightS">Заполни данные, и получи видео урок бесплатно!</p>
       </div>
       <form [formGroup]="clientsForm" fxLayout="column">
 

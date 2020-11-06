@@ -11,11 +11,11 @@ export class StudentsService {
   }
 
   getStudentsList() {
-    return this._http.get('http://localhost:3000/clients');
+    return this._http.get('/form/get');
   }
 
   addStudentData(data: any) {
-    return this._http.post('http://localhost:3000/clients', data);
+    return this._http.post('/form/create', data);
   }
 
 }
