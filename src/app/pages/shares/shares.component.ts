@@ -40,7 +40,7 @@ export class SharesComponent implements OnInit {
       id: new FormControl(0),
       name: new FormControl('', Validators.required),
       phone: new FormControl('', [Validators.required,
-        Validators.pattern('[0-9 ()+-]*'), Validators.maxLength(17), Validators.minLength(17)]),
+        Validators.pattern('[0-9 ()+-]*'), Validators.maxLength(17), Validators.minLength(10)]),
       language: new FormControl('', Validators.required)
     });
   }
